@@ -1,0 +1,22 @@
+version: '2'
+services:
+  app:
+    image: desi_stack
+    environment:
+      - WHO=Kai
+  web:
+    image: desi_stack-nginx
+    ports:
+    - "5000:8080"
+  db:
+    image: postgres:11
+    ports:
+    - "5432:5432"
+    volumes:
+    - my-datavolume:/var/lib/postgres
+    environment:
+        POSTGRES_DB: 'postgres_db'
+        POSTGRES_USER: 'test'
+        POSTGRES_PASSWORD: 'pass'
+volumes:
+  my-datavolume:

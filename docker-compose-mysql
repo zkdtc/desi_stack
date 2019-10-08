@@ -1,0 +1,21 @@
+version: '2'
+services:
+  app:
+    image: desi_stack
+    environment:
+      - WHO=Kai
+  web:
+    image: desi_stack-nginx
+    ports:
+    - "5000:8080"
+  db:
+    image: mysql:8
+    volumes:
+#    - ./mysql:/var/lib/mysql
+    - my-datavolume:/var/lib/mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: "pass"
+        MYSQL_USER: 'test'
+        MYSQL_PASSWORD: 'pass'
+volumes:
+  my-datavolume:
