@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Content of "{{ stack_request['title'] }}"{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <form method=post enctype=multipart/form-data>
+       <label for="title">Title: {{ stack_request['title'] }}</label>
+       <label for="filename">Filename: {{ stack_request['filename'] }}</label>
+       <textarea name="File Content" id="file_content">{{ stack_request['file_content']}}</textarea>
+    </form>
+  <hr>
+  <form action="{{ url_for('stack_request.delete', id=stack_request['id']) }}" method="post">
+    <input class="danger" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
+  </form>
+{% endblock %}

@@ -27,10 +27,10 @@ nav ul li a, nav ul li span, header .action { display: block; padding: 0.5rem; }
 .content input, .content textarea { margin-bottom: 1em; }
 .content textarea { min-height: 12em; resize: vertical; }
 .flash { margin: 1em 0; padding: 1em; background: #cae6f6; border: 1px solid #37a844; }
-.post > header { display: flex; align-items: flex-end; font-size: 0.85em; }
-.post > header > div:first-of-type { flex: auto; }
-.post > header h1 { font-size: 1.5em; margin-bottom: 0; }
-.post .about { color: slategray; font-style: italic; }
-.post .body { white-space: pre-line; }
+.stack_request > header { display: flex; align-items: flex-end; font-size: 0.85em; }
+.stack_request > header > div:first-of-type { flex: auto; }
+.stack_request > header h1 { font-size: 1.5em; margin-bottom: 0; }
+.stack_request .about { color: slategray; font-style: italic; }
+.stack_request .filename { white-space: pre-line; }
 input.danger {color: #cc2f2e;}
 input[type=submit] {align-self: start; min-width: 10em;}

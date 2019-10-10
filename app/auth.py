@@ -21,7 +21,6 @@ def register():
             error = 'Password is required.'
         cur.execute('SELECT id FROM users WHERE username = %s',(username,))
         t=cur.fetchone()
-        import pdb;pdb.set_trace()
         if t is not None:
             error = 'User {} is already registered.'.format(username)
 

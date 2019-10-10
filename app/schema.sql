@@ -14,3 +14,12 @@ CREATE TABLE post (
   body TEXT NOT NULL,
   FOREIGN KEY (author_id) REFERENCES users (id)
 );
+
+CREATE TABLE stack_request (
+  id SERIAL PRIMARY KEY,
+  author_id INTEGER NOT NULL,
+  created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  title TEXT NOT NULL,
+  filename TEXT NOT NULL,
+  FOREIGN KEY (author_id) REFERENCES users (id)
+);
